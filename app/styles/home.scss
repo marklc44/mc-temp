@@ -1,0 +1,71 @@
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+body {
+	background:rgb(238, 238, 238);
+	padding-top:50px;
+}
+
+.page-wrap {
+	position:relative;
+	width:100%;
+}
+.navbar-brand {
+	font-family:'Yeseva One';
+	color: #A65114;
+	text-transform:uppercase;
+}
+.home-jumbo {
+	background:url(../images/me.jpg) top left no-repeat;
+	background-size:cover;
+	background-position:0 -4em;
+	height:400px;
+	color:#fff;
+	@include vendor-prefix(text-shadow, 2px 2px 2px rgb(100, 100, 100))
+}
+.home-jumbo h1 {
+	font-family:'Yeseva One';
+	color:#fff;
+}
+h3 {
+	color:#5F5E5D;
+	text-align:center;
+	text-transform:uppercase;
+	margin-bottom:2em;
+}
+.tn-grid {
+	width:100%;
+	padding:2% 5% 5% 5%;
+}
+.thumbnail {
+	min-height:250px;
+}
+.tn-crop {
+	max-height:126px;
+	overflow:hidden;
+}
+.about {
+	background:rgb(228, 228, 228);
+}
+.content-img {
+	width:50%;
+	float:left;
+	margin-right:10px;
+}
+.footer {
+	padding-left:5%;
+	padding-right:5%;
+}
+@media screen and (max-width: 755px) {
+	.home-jumbo {
+		max-height:339px;
+	}
+
+}
+
